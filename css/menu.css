@@ -1,0 +1,79 @@
+header {
+	/*ancho del 100%*/
+	width: 100%;
+	height: 50px; /*alto de 50px*/
+	background: #333; /*color de fondo del header*/
+	color: #fff; /*color de letra del header*/
+
+	position: fixed; /*para que no se mueva el menú*/
+	top: 0; /*para que aranque desde estas posiciones*/
+	left: 0;
+	z-index: 100; /*para que esté siempre delante de los demás elementos*/
+}
+
+/*llamada a una clase*/
+.contenedor{
+	width: 98%; /*ancho del contenedor*/
+	margin: auto; 
+}
+
+.contenedor h1{
+	margin-top: 10px;
+	float: left;
+}
+
+header.contenedor {
+	display: table;
+}
+
+/*llamada al id del imput*/
+#menu-bar{
+	display: none;
+}
+
+header label{
+	float: right; /*que vaya hacia la derecha*/
+	font-size: 28px; /*tamanho del icono*/
+	margin: 6px 0; /*margen arriba y abajo de 6px y en los costados de 0*/
+	cursor: pointer;
+}
+
+.menu{
+	position: absolute;
+	top: 50px; /*para que inice al lado izquierdo de la pantalla*/
+	left: 0;
+	width: 30%;
+	height: 100vh; /*para que ocupe siempre el 100% del ancho de la ventana*/
+	background: rgba(51,51,51,0.9); /*el mismo color de fondo que el header pero con una traspariencia de 0.9*/
+}
+
+.menu a{
+	display: block; /*para que enliste el menú*/
+	color: #fff; /*color de la letra*/
+	height: 50px; /*interlineado*/
+	text-decoration: none;
+	padding: 10px; 
+	border-bottom: 1px solid rgba(225,225,225,0.5); /*borde para cada menú*/
+}
+
+.menu a:hover{
+	background: rgba(225,225,225,0.5); /*coloca color al pasar el cursor por el menú*/
+}
+
+.menu{
+	transition: all 0.5s;
+	transform: translateX(-100%);
+}
+
+/*cuando el check este activado va a selecionar el .menú*/
+#menu-bar:checked ~ .menu{
+	transform: translateX(0%); /*lo estamos transladando a su posición original*/
+}
+
+/*Responsive*/
+
+@media (min-width: 1024px) {
+	.contenedor{
+		width: 1000px;
+	}
+	

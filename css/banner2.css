@@ -1,0 +1,33 @@
+#banner{
+	margin-top: 50px;
+
+}
+
+#banner img{
+	width: 100%;
+	height: 600px;
+}
+
+#banner .texto{
+	position: absolute;
+	top: 82%;
+	left: 3%;
+	color: #fff;
+}
+#banner h2 {
+	line-height: 5px;
+	font-size: 50px;
+}
+#banner p{
+	font-size: 20px;
+}
+#banner a{
+	display: block;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	margin-top: 10px;
+	border: 3px solid #fff;
+
+}
